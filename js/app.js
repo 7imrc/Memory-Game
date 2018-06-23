@@ -39,12 +39,28 @@ function shuffle(array) {
 
 //Select all the cards
 const allCards = document.querySelectorAll('.card');
+//Define array for the open cards
+let openCards = [];
 
 //Loop through the cards and add an event listener for a mouse click to flip over a card
 allCards.forEach(function(card) {
   card.addEventListener('click', function(e) {
-    //console.log(e);
-    //console.log(card);
-    card.classList.add('open', 'show');
+
+    if (!card.classList.contains('open') && !card.classList.contains('show') && !card.classList.contains('match')) {
+        openCards.push(card);
+        card.classList.add('open', 'show');
+        console.log('Open cards:', openCards.length);
+
+        if (openCards.length == 2) {
+          setTimeout(function() {
+            openCards.forEach(function(card) {
+              card.classList.remove('open', 'show');
+            });
+
+            //clear array
+            openCards = [];
+          }, 1000);
+        }
+      }
+    });
   });
-});
