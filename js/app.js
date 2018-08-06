@@ -182,6 +182,8 @@ function gameComplete () {
   }
 };
 
+/******     Reset button     ******/
+
   //reset button
   const restartBtn = document.querySelector('.restart');
 
@@ -193,7 +195,9 @@ function gameComplete () {
     console.log('restart activated');
   });
 
-//function for displaying the message at the end of the game
+  /******     Game complete modal     ******/
+
+// Display the message at the end of the game.
 function showModal() {
   let modal = document.querySelector('.modal');
   let modalText = document.querySelector('.modal-content h2');
@@ -202,7 +206,7 @@ function showModal() {
   modal.classList.toggle('show-modal');
 }
 
-//modal play again button
+// Modal play again button.
 const playAgainBtn = document.querySelector('#modal-restart');
 let modal = document.querySelector('.modal');
 
@@ -214,9 +218,8 @@ playAgainBtn.addEventListener('click', function() {
   modal.classList.toggle('show-modal');
 });
 
-//modal ok button to close modal window
+// Modal ok button, to close modal window.
 const okBtn = document.querySelector('#modal-ok');
-
 
 okBtn.addEventListener('click', function() {
   modal.classList.toggle('show-modal');
@@ -225,6 +228,9 @@ okBtn.addEventListener('click', function() {
 //timer functionionality, increment by 1 sec
 //time = 0;
 
+/******     Timer     ******/
+
+// Timer operation, count in seconds.
 function incrementTimer() {
 const timer = document.querySelector('.timer');
   //let time = 0;
@@ -236,18 +242,20 @@ const timer = document.querySelector('.timer');
 //start timer
 //let interval;
 
+// Start the timer.
 function startTimer() {
   //let interval;
   interval = setInterval(incrementTimer, 1000);
 }
 
-//stop timer
-
+// Stop the timer.
 function stopTimer() {
   clearInterval(interval);
 }
 
-//change the star rating
+/******     Star rating     ******/
+
+// Decrease the star rating as the game progresses
 function starChange() {
 
 console.log('starChange accessed');
@@ -263,6 +271,7 @@ let stars = document.querySelectorAll('.stars li i');
   }
 }
 
+// Reset the number of stars to 3.
 function resetStars() {
   let stars = document.querySelectorAll('.stars li i');
     for (i=0; i < 3; i++) {
