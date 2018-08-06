@@ -16,6 +16,7 @@ let cards = ['fa-diamond', 'fa-diamond',
             'fa-bomb', 'fa-bomb'];
 
 let stars = document.querySelectorAll('.stars li i');
+let starCount = 3;
 
 
 /*
@@ -200,9 +201,12 @@ function gameComplete () {
 // Display the message at the end of the game.
 function showModal() {
   let modal = document.querySelector('.modal');
-  let modalText = document.querySelector('.modal-content h2');
+  let modalTextTime = document.querySelector('#modalTime');
+  let modalTextStars = document.querySelector('#modalStars');
 
-  modalText.innerHTML = `Congratulations, you matched all the cards in ${time} seconds!`;
+
+  modalTextTime.innerHTML = `Congratulations, you matched all the cards in ${time} seconds!`;
+  modalTextStars.innerHTML = `You scored ${starCount} stars!`;
   modal.classList.toggle('show-modal');
 }
 
@@ -260,22 +264,26 @@ function starChange() {
 
 console.log('starChange accessed');
 console.log(`moves: ${moves}`);
-let stars = document.querySelectorAll('.stars li i');
+//let stars = document.querySelectorAll('.stars li i');
 
   if (moves > 10 && moves < 20) {
     stars[2].classList.remove('active');
+    starCount = 2;
   } else if (moves > 21 && moves < 30) {
     stars[1].classList.remove('active');
+    starCount = 1;
   } else if (moves > 31) {
     stars[0].classList.remove('active');
+    starCount = 0;
+
   }
 }
 
 // Reset the number of stars to 3.
 function resetStars() {
-  let stars = document.querySelectorAll('.stars li i');
+  //let stars = document.querySelectorAll('.stars li i');
     for (i=0; i < 3; i++) {
       stars[i].classList.add('active');
-
+    starCount = 3;
     }
 }
