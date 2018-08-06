@@ -148,3 +148,52 @@ h1 {
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
     z-index: 1000;
 }
+
+
+/*
+ * Media responsive styles
+ */
+
+@media screen and (max-width: 700px) {
+  .deck {
+    width: 450px;
+    min-height: 450px;
+  }
+
+  .deck .card {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .deck {
+    width: 350px;
+    min-height: 350px;
+  }
+
+  .deck .card {
+    height: 60px;
+    width: 60px;
+  }
+
+  .modal-content {
+    width: 18rem;
+  }
+
+  .score-panel {
+      width: 250px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .deck {
+    width: 300px;
+    min-height: 300px;
+  }
+
+  .deck .card {
+    height: 50px;
+    width: 50px;
+  }
+}
