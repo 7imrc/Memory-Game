@@ -5,7 +5,7 @@ This Udacity project is designed to show my use of JavaScript.  The starter code
 ## Installing
 
 1. Clone this repo.
-2. Open `index.html` insode your browser.
+2. Open `index.html` inside your browser.
 
 ## Game play
 
