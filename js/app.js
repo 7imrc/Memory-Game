@@ -226,12 +226,9 @@ function starChange() {
   if (moves > 10 && moves < 20) {
     stars[2].classList.remove('active');
     starCount = 2;
-  } else if (moves > 21 && moves < 30) {
+  } else if (moves > 20) {
     stars[1].classList.remove('active');
     starCount = 1;
-  } else if (moves > 31) {
-    stars[0].classList.remove('active');
-    starCount = 0;
   }
 }
 
