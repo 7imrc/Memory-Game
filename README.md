@@ -7,6 +7,11 @@ This Udacity project is designed to show my use of JavaScript.  The starter code
 1. Clone this repo.
 2. Open `index.html` inside your browser.
 
+## Dependencies
+
+* [Font Awesome](https://fontawesome.com/).
+* [Google Fonts](https://fonts.google.com/).
+
 ## Game play
 
 The game consists of eight different pairs of cards.  These are randomly shuffled and placed face-down on the board.
